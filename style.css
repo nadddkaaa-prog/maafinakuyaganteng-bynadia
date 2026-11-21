@@ -4,7 +4,7 @@
   --light-blue: #E0E1DD;
   --cream-gold: #F5E6CA;
   --brown: #f74db0;
-  --white: #fd2390;
+  --white: #ffffff;
   --pink-gold: #E0A96D;
 }
 
@@ -16,17 +16,19 @@
 }
 
 body {
-  overflow: hidden;
-  height: 100vh;
+  min-height: 100vh;
+  min-height: 100dvh;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   background-color: var(--navy);
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
-/* Background Foto Full Halaman (Hanya di lapisan paling belakang) */
+/* Background Foto Full Halaman */
 .full-bg-image {
   position: fixed;
   top: 0;
@@ -34,7 +36,6 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: var(--navy);
-  /* Salin "gamsus 3.jpeg" ke folder yang sama dengan index.html & style.css */
   background-image: url("https://cdnstatic.tencentcs.com/edgeone/pages/assets/1795198368577-UeQj.png");
   background-size: cover;
   background-position: center;
@@ -84,34 +85,36 @@ body {
   background: linear-gradient(135deg, var(--cream-gold), var(--pink-gold));
   color: var(--brown);
   border: 2px solid var(--brown);
-  padding: 10px 18px;
+  padding: 8px 14px;
   border-radius: 25px;
   font-weight: bold;
+  font-size: 0.85rem;
   cursor: pointer;
-  box-shadow: 0 4px 10px rgb(71, 140, 231);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .app-container {
   width: 100%;
   max-width: 900px;
-  height: 92vh;
+  min-height: 100vh;
+  min-height: 100dvh;
   margin: 0 auto;
   position: relative;
   z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 60px 10px 20px 10px;
 }
 
 .page {
   display: none;
   width: 100%;
-  height: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 18px;
-  padding: 20px;
+  gap: 15px;
+  padding: 10px;
   text-align: center;
   position: relative;
   z-index: 3;
@@ -122,16 +125,19 @@ body {
 }
 
 .aesthetic-card {
-  background: linear-gradient(135deg, rgba(155, 197, 231, 0.85), rgba(163, 206, 241, 0.75), rgba(27, 38, 59, 0.85));
+  background: linear-gradient(135deg, rgba(30, 41, 89, 0.88), rgba(27, 38, 59, 0.92));
   backdrop-filter: blur(10px);
-  border: 3px solid rgb(138, 154, 245);
-  border-radius: 25px;
-  padding: 30px;
+  border: 2px solid rgba(245, 230, 202, 0.4);
+  border-radius: 20px;
+  padding: 20px 15px;
   margin: 0 auto;
-  width: 90%;
-  box-shadow: 0 15px 35px rgba(101, 78, 231, 0.973);
+  width: 100%;
+  max-width: 700px;
+  max-height: 75vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   color: var(--white);
-  text-shadow: 1px 1px 3px rgba(86, 51, 211, 0.973);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
   text-align: center;
   position: relative;
   z-index: 4;
@@ -139,13 +145,14 @@ body {
 
 .aesthetic-card h2 {
   color: var(--cream-gold);
-  margin-bottom: 15px;
-  font-size: 2rem;
+  margin-bottom: 12px;
+  font-size: 1.4rem;
+  word-wrap: break-word;
 }
 
 .aesthetic-card p {
-  font-size: 1.2rem;
-  line-height: 1.7;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 .nav-group {
@@ -153,27 +160,28 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 15px;
-  margin-bottom: 10px;
+  gap: 10px;
+  margin-top: 10px;
   position: relative;
   z-index: 5;
+  width: 100%;
 }
 
 .nav-btn {
   background: linear-gradient(135deg, var(--blue-soft), var(--navy));
   color: var(--cream-gold);
-  border: 2px solid var(--cream-gold);
-  padding: 12px 26px;
-  font-size: 1rem;
+  border: 1px solid var(--cream-gold);
+  padding: 10px 18px;
+  font-size: 0.9rem;
   font-weight: bold;
-  border-radius: 15px;
+  border-radius: 12px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgb(80, 152, 245);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .nav-btn:hover {
-  transform: translateY(-3px) scale(1.03);
+  transform: translateY(-2px) scale(1.02);
   background: linear-gradient(135deg, var(--cream-gold), var(--brown));
   color: var(--white);
 }
@@ -185,13 +193,13 @@ body {
 /* AMPLOP WARNA CREAM & NAVY (HALAMAN 1) */
 .envelope-wrapper {
   cursor: pointer;
-  margin: 0 auto;
+  margin: 20px auto;
   perspective: 1000px;
 }
 
 .envelope {
-  width: 340px;
-  height: 220px;
+  width: 280px;
+  height: 180px;
   background-color: var(--navy);
   position: relative;
   border-radius: 0 0 15px 15px;
@@ -199,7 +207,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  box-shadow: 0 12px 25px rgb(86, 144, 231);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 
 .flap {
@@ -207,9 +215,9 @@ body {
   top: 0;
   width: 0;
   height: 0;
-  border-left: 170px solid transparent;
-  border-right: 170px solid transparent;
-  border-top: 125px solid var(--cream-gold);
+  border-left: 140px solid transparent;
+  border-right: 140px solid transparent;
+  border-top: 100px solid var(--cream-gold);
   transform-origin: top;
   transition: transform 0.6s ease;
   z-index: 3;
@@ -219,30 +227,29 @@ body {
 
 .flap-text {
   position: absolute;
-  top: -110px;
-  width: 180px;
+  top: -85px;
+  width: 160px;
   text-align: center;
   color: var(--navy);
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 0.85rem;
   letter-spacing: 0.5px;
   transition: opacity 0.3s ease;
 }
 
-/* Isi surat disembunyikan sebelum amplop dibuka */
 .letter {
   background-color: var(--cream-gold);
-  padding: 20px;
+  padding: 15px;
   border-radius: 10px;
-  width: 88%;
-  height: 82%;
-  margin-bottom: 12px;
+  width: 90%;
+  height: 85%;
+  margin-bottom: 8px;
   color: var(--navy);
   font-weight: bold;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 12px rgba(54, 136, 243, 0.884);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   z-index: 2;
   border: 1px dashed var(--navy);
   opacity: 0;
@@ -252,9 +259,9 @@ body {
 }
 
 .letter-text {
-  font-size: 1.05rem;
+  font-size: 0.9rem;
   color: var(--navy);
-  line-height: 1.5;
+  line-height: 1.4;
   text-shadow: none;
   font-weight: 600;
 }
@@ -271,7 +278,7 @@ body {
 .envelope-wrapper.open .letter {
   opacity: 1;
   visibility: visible;
-  transform: translateY(-55px);
+  transform: translateY(-45px);
 }
 
 .hint {
@@ -279,6 +286,7 @@ body {
   font-style: italic;
   text-align: center;
   margin-bottom: 10px;
+  font-size: 0.9rem;
 }
 
 /* HALAMAN 2: KUE 3 TINGKAT */
@@ -289,8 +297,8 @@ body {
 }
 
 .cake-container {
-  width: 220px;
-  height: 220px;
+  width: 180px;
+  height: 180px;
   position: relative;
   margin: 15px auto;
   display: flex;
@@ -302,35 +310,35 @@ body {
 .cake-tier {
   width: 100%;
   border-radius: 10px 10px 0 0;
-  box-shadow: inset 0 5px 10px rgba(110, 129, 235, 0.986);
+  box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-.tier-bottom { height: 70px; width: 220px; background-color: var(--brown); }
-.tier-middle { height: 55px; width: 170px; background-color: #4A90E2; }
-.tier-top { height: 45px; width: 120px; background-color: var(--cream-gold); }
+.tier-bottom { height: 60px; width: 180px; background-color: var(--brown); }
+.tier-middle { height: 45px; width: 140px; background-color: #4A90E2; }
+.tier-top { height: 35px; width: 100px; background-color: var(--cream-gold); }
 
 .candles {
   display: flex;
-  gap: 20px;
+  gap: 15px;
   position: absolute;
-  top: 15px;
+  top: 25px;
 }
 
 .candle {
-  width: 12px;
-  height: 35px;
+  width: 10px;
+  height: 30px;
   background: linear-gradient(to bottom, #ff9a9e, #fecfef);
   border-radius: 3px;
   position: relative;
 }
 
 .flame {
-  width: 12px;
-  height: 18px;
+  width: 10px;
+  height: 15px;
   background: orange;
   border-radius: 50% 50% 20% 20%;
   position: absolute;
-  top: -18px;
+  top: -15px;
   box-shadow: 0 0 10px #ff0;
   animation: flicker 0.6s infinite alternate;
 }
@@ -346,20 +354,21 @@ body {
   background: linear-gradient(135deg, var(--brown), var(--pink-gold));
   color: var(--white);
   border: none;
-  padding: 10px 20px;
+  padding: 10px 18px;
   border-radius: 10px;
   cursor: pointer;
   font-weight: bold;
+  font-size: 0.9rem;
   margin-top: 10px;
-  box-shadow: 0 4px 8px rgb(67, 123, 243);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .marquee-container {
   width: 100%;
   overflow: hidden;
-  background: rgb(101, 98, 236);
+  background: rgba(101, 98, 236, 0.8);
   border-radius: 10px;
-  padding: 10px;
+  padding: 8px;
   margin-top: 15px;
 }
 
@@ -368,6 +377,7 @@ body {
   animation: marquee 10s linear infinite;
   color: var(--cream-gold);
   font-weight: bold;
+  font-size: 0.9rem;
 }
 
 @keyframes marquee {
@@ -377,25 +387,32 @@ body {
 
 /* HALAMAN 8: FITUR GOMBALAN & KALKULATOR */
 .gombal-box {
-  background: rgba(60, 136, 223, 0.904);
-  padding: 15px;
+  background: rgba(60, 136, 223, 0.4);
+  padding: 12px;
   border-radius: 12px;
-  border: 2px dashed var(--cream-gold);
-  margin: 15px 0;
-  min-height: 60px;
+  border: 1px dashed var(--cream-gold);
+  margin: 12px 0;
+  min-height: 50px;
   font-weight: bold;
+  font-size: 0.95rem;
 }
 
 .love-calculator {
   margin-top: 15px;
-  border-top: 1px solid rgb(47, 6, 231);
-  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 12px;
+}
+
+.love-calculator h3 {
+  font-size: 1.1rem;
+  color: var(--cream-gold);
 }
 
 .input-group {
   display: flex;
-  gap: 10px;
-  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
   margin: 10px 0;
 }
 
@@ -403,72 +420,70 @@ body {
   padding: 8px 12px;
   border-radius: 8px;
   border: none;
-  width: 45%;
+  width: 80%;
   text-align: center;
   outline: none;
+  font-size: 0.9rem;
 }
 
 #love-result {
   margin-top: 10px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: bold;
   color: var(--cream-gold);
 }
 
-/* HALAMAN 9: BINGKAI FOTO BENTUK LOVE DI ATAS BACKGROUND (8 FOTO) */
+/* HALAMAN 9: BINGKAI FOTO BENTUK LOVE */
 .gallery-title {
   color: var(--cream-gold);
   text-align: center;
-  text-shadow: 2px 2px 4px rgb(253, 21, 195);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   position: relative;
   z-index: 5;
+  font-size: 1.3rem;
 }
 
 .photo-grid-large {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   justify-items: center;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
   width: 100%;
-  max-height: 68vh;
+  max-height: 60vh;
   overflow-y: auto;
-  padding: 15px;
+  padding: 10px;
   position: relative;
   z-index: 5;
 }
 
 .love-frame-large {
-  width: 160px;
-  height: 160px;
+  width: 120px;
+  height: 120px;
   margin: 0 auto;
-  clip-path: path('M 80,24 A 40,40 0 0,0 0,64 C 0,112 80,152 80,152 C 80,152 160,112 160,64 A 40,40 0 0,0 80,24 Z');
+  clip-path: path('M 60,18 A 30,30 0 0,0 0,48 C 0,84 60,114 60,114 C 60,114 120,84 120,48 A 30,30 0 0,0 60,18 Z');
   background: linear-gradient(135deg, var(--cream-gold), var(--pink-gold));
-  padding: 6px;
+  padding: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  opacity: 1;
-  visibility: visible;
   position: relative;
   z-index: 6;
   transition: transform 0.3s ease;
-  filter: drop-shadow(0 6px 10px rgba(108, 96, 224, 0.966));
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.4));
 }
 
 .love-frame-large:hover {
-  transform: scale(1.08);
+  transform: scale(1.05);
 }
 
 .love-frame-large img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  clip-path: path('M 80,24 A 40,40 0 0,0 0,64 C 0,112 80,152 80,152 C 80,152 160,112 160,64 A 40,40 0 0,0 80,24 Z');
+  clip-path: path('M 60,18 A 30,30 0 0,0 0,48 C 0,84 60,114 60,114 C 60,114 120,84 120,48 A 30,30 0 0,0 60,18 Z');
   display: block;
-  opacity: 1;
-  visibility: visible;
 }
 
 /* HALAMAN 10: 2 VIDEO DI ATAS BACKGROUND */
@@ -479,62 +494,56 @@ body {
 
 .dual-video-grid {
   display: flex;
-  gap: 20px;
+  flex-direction: column;
+  gap: 15px;
   justify-content: center;
   align-items: center;
   margin-top: 15px;
-  flex-wrap: wrap;
   position: relative;
   z-index: 5;
 }
 
 .video-wrapper-aesthetic {
-  flex: 1 1 260px;
-  max-width: 380px;
-  min-width: 240px;
-  background: rgba(253, 71, 171, 0.92);
-  padding: 10px;
+  width: 100%;
+  max-width: 320px;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 8px;
   border-radius: 15px;
-  border: 2px solid var(--cream-gold);
-  box-shadow: 0 5px 15px rgba(138, 154, 245, 0.87);
+  border: 1px solid var(--cream-gold);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   position: relative;
   z-index: 6;
-  opacity: 1;
-  visibility: visible;
 }
 
 .video-wrapper-aesthetic video {
   width: 100%;
-  max-height: 260px;
+  max-height: 200px;
   object-fit: cover;
   border-radius: 10px;
   display: block;
-  background-color: #ff5dc1;
-  opacity: 1;
-  visibility: visible;
 }
 
 .video-caption {
-  margin-top: 8px;
-  font-size: 0.95rem;
+  margin-top: 6px;
+  font-size: 0.85rem;
   color: var(--cream-gold);
   font-weight: bold;
 }
 
 /* HALAMAN 11: PENUTUP */
 .closing-card {
-  padding: 40px 30px;
+  padding: 25px 15px;
 }
 
 .closing-text {
-  font-size: 1.3rem;
-  margin: 20px 0;
-  line-height: 1.8;
+  font-size: 1.1rem;
+  margin: 15px 0;
+  line-height: 1.6;
 }
 
 .closing-heart {
-  font-size: 2rem;
-  margin-top: 15px;
+  font-size: 1.8rem;
+  margin-top: 10px;
   animation: pulse 1.5s infinite;
 }
 
@@ -544,17 +553,42 @@ body {
   100% { transform: scale(1); }
 }
 
-@media (max-width: 768px) {
+/* RESPONSIVE LAYAR BESAR (TABLET / DESKTOP) */
+@media (min-width: 768px) {
+  .aesthetic-card h2 {
+    font-size: 1.8rem;
+  }
+  .aesthetic-card p {
+    font-size: 1.15rem;
+  }
+  .input-group {
+    flex-direction: row;
+  }
+  .input-group input {
+    width: 45%;
+  }
   .photo-grid-large {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
   }
   .love-frame-large {
-    width: 130px;
-    height: 130px;
-    clip-path: path('M 65,19.5 A 32.5,32.5 0 0,0 0,52 C 0,91 65,123.5 65,123.5 C 65,123.5 130,91 130,52 A 32.5,32.5 0 0,0 65,19.5 Z');
+    width: 150px;
+    height: 150px;
+    clip-path: path('M 75,22.5 A 37.5,37.5 0 0,0 0,60 C 0,105 75,142.5 75,142.5 C 75,142.5 150,105 150,60 A 37.5,37.5 0 0,0 75,22.5 Z');
   }
   .love-frame-large img {
-    clip-path: path('M 65,19.5 A 32.5,32.5 0 0,0 0,52 C 0,91 65,123.5 65,123.5 C 65,123.5 130,91 130,52 A 32.5,32.5 0 0,0 65,19.5 Z');
+    clip-path: path('M 75,22.5 A 37.5,37.5 0 0,0 0,60 C 0,105 75,142.5 75,142.5 C 75,142.5 150,105 150,60 A 37.5,37.5 0 0,0 75,22.5 Z');
+  }
+  .dual-video-grid {
+    flex-direction: row;
+  }
+  .envelope {
+    width: 320px;
+    height: 200px;
+  }
+  .flap {
+    border-left: 160px solid transparent;
+    border-right: 160px solid transparent;
+    border-top: 115px solid var(--cream-gold);
   }
 }
